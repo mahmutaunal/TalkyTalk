@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.mahmutalperenunal.talkytalk.activity.Message" />
+
+        <variable
+            name="hisImage"
+            type="String" />
+
+        <variable
+            name="online"
+            type="String" />
+
+    </data>
+
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.Message"
+        tools:ignore="RedundantNamespace">
+
+        <include
+            android:id="@+id/messageToolbar"
+            layout="@layout/message_toolbar"
+            bind:activity="@{activity}"
+            bind:hisImage="@{hisImage}"
+            bind:online="@{online}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lottieAnimation"
+            android:layout_below="@+id/messageToolbar" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/msgData"
+            android:layout_marginStart="5dp"
+            android:visibility="invisible"
+            bind:lottie_autoPlay="true"
+            bind:lottie_loop="true"
+            bind:lottie_rawRes="@raw/typing_animation"
+            bind:lottie_repeatCount="20" />
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:id="@+id/msgData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:id="@+id/messageLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.8"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btnDataSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/ic_attach" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/msgText_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:hint="Write message.."
+                    android:padding="8dp"
+                    app:boxBackgroundColor="@color/edittextColor"
+                    app:boxStrokeColor="@color/purple_700"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="?attr/colorPrimary"
+                    tools:ignore="Autofill">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/msgText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:scrollbars="vertical"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize,TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btnSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight=".2"
+                    android:src="@drawable/ic_send" />
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+</layout>

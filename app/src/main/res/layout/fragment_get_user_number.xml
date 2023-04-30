@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".fragment.GetUserNumber">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgGetNumber"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/group_1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgGetNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Verify your number"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVerify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Enter  your number for verification"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_contentColor="?attr/colorSecondary"
+            app:ccp_countryPreference="PK"
+            app:ccp_defaultPhoneCode="90"
+            app:ccp_showFlag="false"
+            tools:ignore="VisualLintBounds" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="?attr/colorSecondary" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtNumber_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Number"
+            app:boxBackgroundColor="?attr/colorPrimary"
+            app:boxStrokeColor="?attr/colorSecondary"
+            app:endIconMode="clear_text"
+            app:hintTextColor="?attr/colorSecondary"
+            tools:ignore="Autofill">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGenerateOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="?attr/colorSecondary"
+        android:text="Generate OTP"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="VisualLintButtonSize" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

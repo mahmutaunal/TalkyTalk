@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btnChat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/btnContact"
+        android:enabled="true"
+        android:icon="@drawable/ic_contact"
+        android:title="Contact" />
+
+    <item
+        android:id="@+id/btnProfile"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="Mine" />
+
+</menu>

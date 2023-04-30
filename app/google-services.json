@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "837520075021",
+    "project_id": "chatapp-13744",
+    "storage_bucket": "chatapp-13744.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837520075021:android:24fe0da42920cc796d2844",
+        "android_client_info": {
+          "package_name": "com.mahmutalperenunal.talkytalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837520075021-t0vgmbb3crjphjni5ii0pci0fos5v105.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mahmutalperenunal.talkytalk",
+            "certificate_hash": "917ba583b386ef05917ebb63c302b2bb13d5aeae"
+          }
+        },
+        {
+          "client_id": "837520075021-sqvnv9gmok0mhb36e8hq2srrtfguhq73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMZpOThWmVnTD5Y-MDt_h3vXZDXSbvyZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837520075021-sqvnv9gmok0mhb36e8hq2srrtfguhq73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

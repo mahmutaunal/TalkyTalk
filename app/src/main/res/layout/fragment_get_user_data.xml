@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.GetUserData">
+
+    <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="?attr/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="?attr/colorSecondary"
+            app:civ_border_width="2dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPickImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/ic_camera"
+            app:layout_anchor="@id/imgUser"
+            app:layout_anchorGravity="end|center"
+            app:tint="?attr/colorSecondary"
+            tools:ignore="ContentDescription" />
+
+    </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="250dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp">
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtUserName_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="Username"
+                android:padding="10dp"
+                app:boxBackgroundColor="@color/edittextColor"
+                app:boxStrokeColor="@color/purple_700"
+                app:endIconMode="clear_text"
+                app:hintTextColor="?attr/colorPrimary"
+                tools:ignore="Autofill">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|textCapSentences"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize,TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtUserStatus_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:padding="10dp"
+                android:text="Hey! I,m using this app"
+                app:boxBackgroundColor="@color/edittextColor"
+                app:boxStrokeColor="@color/purple_700"
+                app:endIconMode="clear_text"
+                app:hintTextColor="?attr/colorPrimary"
+                tools:ignore="Autofill">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtUserStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|textCapSentences"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDataDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="Done"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="VisualLintButtonSize" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
